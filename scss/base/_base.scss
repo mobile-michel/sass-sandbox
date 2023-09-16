@@ -1,0 +1,7 @@
+// styles.scss
+@use '../abstracts/variables';
+
+main {
+  background-color: variables.$background-color;
+  color: white;
+}
