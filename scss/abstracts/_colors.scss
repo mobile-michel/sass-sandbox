@@ -1,7 +1,9 @@
 @use 'sass:color';
+@use '../configuration';
 
-$hue: 200deg;
-$primary: hsl($hue, 25%, 50%);
+$hue: configuration.$hue;
+$saturation: configuration.$saturation;
+$primary: hsl($hue, $saturation, 50%);
 $complement: color.complement(hsl($hue, 5%, 50%));
 $accentLeft: adjust-hue(hsl($hue, 40%, 50%), -30deg);
 $accentRight: adjust-hue(hsl($hue, 40%, 50%), 30deg);

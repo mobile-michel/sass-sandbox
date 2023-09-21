@@ -1,6 +1,7 @@
 ---
 title: Demo
 description: A Sass workflow
+date: 2023-09-01
 layout: base
 stylesheet: color
 tags: primary
@@ -229,10 +230,10 @@ To add a `nav` menu, just add the following to the `<header>` section of your si
 
 In Simple.css, images within the `main` element are always full width and have rounded edges to them. The `figcaption` element is also formatted in Simple.css. Here are examples of images with and without a caption:
 
-![A dog at an iPad](/assets/images/dog-ipad.jpg)
+![A dog at an iPad](https://images.pexels.com/photos/895259/pexels-photo-895259.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
 
 <figure>
-  <img alt="This is a black swan" src="/assets/images/goose.jpg" />
+  <img alt="This is a black swan" src="https://images.pexels.com/photos/1837168/pexels-photo-1837168.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
   <figcaption>This is a black swan</figcaption>
 </figure>
 

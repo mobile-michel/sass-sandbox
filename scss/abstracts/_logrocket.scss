@@ -1,0 +1,90 @@
+@use 'colors';
+
+/* Global variables. */
+:root,
+::backdrop {
+  /* Set sans-serif & mono fonts */
+  --sans-font: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
+    "Nimbus Sans L", Roboto, "Noto Sans", "Segoe UI", Arial, Helvetica,
+    "Helvetica Neue", sans-serif;
+  --mono-font: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  --standard-border-radius: 5px;
+
+  /* Default (light) theme */
+  --bg: #{colors.$primary100}; // Main background
+  --accent-bg: #{colors.$primary200}; // Article background
+  --accent-border: #{colors.$primary300}; // Article border
+  --text: #{colors.$complement800}; // Main text
+  --text-light: #{colors.$complement700}; // Lighter text or aside background
+  --text-invert: #{colors.$complement100}; // Inverted text for aside
+  --border: #{colors.$complement900}; // Aside border
+  --accent: #{colors.$accentLeft600}; // Links & buttons
+  --accent-text: #{colors.$accentLeft100}; // Link text
+  --accent-hover: #{colors.$accentRight100}; // Hovered links & buttons
+  --accent-hover-text: #{colors.$accentRight600}; // Hovered link text
+  --code: #{colors.$code};
+  --preformatted: #{colors.$preformatted};
+  --marked: #{colors.$marked};
+  --disabled: #{colors.$disabled};
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 600px;
+  padding: 2em;
+}
+
+.cp-grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 2em;
+}
+
+.cp-grid-col-full {
+  grid-column: 1 / 3;
+}
+
+.cp-grid-label {
+  font-size: 0.75em;
+  font-family: Nunito, sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-light);
+}
+
+.cp-widget {
+  &:not(:last-child) {
+    padding-bottom: 2em;
+    border-bottom: 1px solid var(--text-light);
+  }
+}
+
+.cp-box {
+  padding: 1.5em;
+  background-color: #{colors.$primary200};
+  border: 1px solid #{colors.$primary300};
+  border-radius: 0.25em;
+
+  &.cp-box--dark {
+    background-color: #{colors.$complement700};
+    color: #{colors.$complement100};
+    border: 1px solid #{colors.$complement900};
+  }
+}
+
+.cp-btn {
+  padding: 1em 1.5em;
+  display: inline-flex;
+  margin: 1em 0;
+  background-color: #{colors.$accentLeft600};
+  color: #{colors.$accentLeft100};
+  border-radius: 0.25em;
+  text-decoration: none;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: #{colors.$accentRight600};
+    color: #{colors.$accentLeft100};
+  }
+}

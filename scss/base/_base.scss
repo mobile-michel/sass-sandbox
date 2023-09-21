@@ -136,6 +136,7 @@ a:visited {
 
 a:hover {
   text-decoration: none;
+  color: var(--accent-hover-text);
 }
 
 button,
@@ -160,7 +161,6 @@ select:disabled,
 button[disabled] {
   cursor: not-allowed;
   background-color: var(--disabled);
-  border-color: var(--disabled);
   color: var(--text-light);
 }
 
@@ -181,7 +181,7 @@ input[type="submit"]:enabled:hover,
 input[type="reset"]:enabled:hover,
 input[type="button"]:enabled:hover,
 label[type="button"]:hover {
-  filter: brightness(1.4);
+  background-color: var(--accent-hover-text);
   cursor: pointer;
 }
 
