@@ -6,7 +6,7 @@ stylesheet: color
 tags: primary
 ---
 
-This demo page details a select set of elements that are meant to show off Simple.css's styling, and provide HTML to help you get started easily. If you want a comprehensive demonstration of elements that may or may not be styled by Simple.css, please see [our test page](https://test.simplecss.org).
+<p class="notice">This demo page details a select set of elements that are meant to show off Simple.css's styling, and provide HTML to help you get started easily. If you want a comprehensive demonstration of elements that may or may not be styled by Simple.css, please see <a href="https://test.simplecss.org">our test page</a>.</p>
 
 This page is a demonstration of the elements that can be formatted using Simple.css. Each section includes a code block on how to include it in your site's design.
 

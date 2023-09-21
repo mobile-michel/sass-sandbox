@@ -13,6 +13,6 @@
   "license": "MIT",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "sass": "^1.64.2"
+    "sass": "^1.68.0"
   }
 }
