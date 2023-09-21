@@ -1,3 +1,50 @@
 @use 'colors';
 
-$background-color: colors.$primary200;
+/* Global variables. */
+:root,
+::backdrop {
+  /* Set sans-serif & mono fonts */
+  --sans-font: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
+    "Nimbus Sans L", Roboto, "Noto Sans", "Segoe UI", Arial, Helvetica,
+    "Helvetica Neue", sans-serif;
+  --mono-font: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  --standard-border-radius: 5px;
+
+  /* Default (light) theme */
+  --bg: #{colors.$primary100}; // Main background
+  --accent-bg: #{colors.$primary200}; // Article background
+  --accent-border: #{colors.$primary300}; // Article border
+  --text: #{colors.$complement800}; // Main text
+  --text-light: #{colors.$complement700}; // Lighter text or aside background
+  --text-invert: #{colors.$complement100}; // Inverted text for aside
+  --border: #{colors.$complement900}; // Aside border
+  --accent: #{colors.$accentLeft600}; // Links & buttons
+  --accent-text: #{colors.$accentLeft100}; // Link text
+  --accent-hover: #{colors.$accentRight100}; // Hovered links & buttons
+  --accent-hover-text: #{colors.$accentRight600}; // Hovered link text
+  --code: #{colors.$code};
+  --preformatted: #{colors.$preformatted};
+  --marked: #{colors.$marked};
+  --disabled: #{colors.$disabled};
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+  :root,
+  ::backdrop {
+    color-scheme: dark;
+    --bg: #212121;
+    --accent-bg: #2b2b2b;
+    --text: #dcdcdc;
+    --text-light: #ababab;
+    --accent: #ffb300;
+    --code: #f06292;
+    --preformatted: #ccc;
+    --disabled: #111;
+  }
+  /* Add a bit of transparency so light media isn't so glaring in dark mode */
+  img,
+  video {
+    opacity: 0.8;
+  }
+}

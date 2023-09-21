@@ -1,1 +1,24 @@
-$primary200: hsl(0, 100%, 80%);
+@use 'sass:color';
+
+$hue: 200deg;
+$primary: hsl($hue, 25%, 50%);
+$complement: color.complement(hsl($hue, 5%, 50%));
+$accentLeft: adjust-hue(hsl($hue, 40%, 50%), -30deg);
+$accentRight: adjust-hue(hsl($hue, 40%, 50%), 30deg);
+
+$primary100: color.change($primary, $lightness: 95%);
+$primary200: color.change($primary, $lightness: 90%);
+$primary300: color.change($primary, $lightness: 80%);
+$complement100: color.change($complement, $lightness: 95%);
+$complement700: color.change($complement, $lightness: 30%);
+$complement800: color.change($complement, $lightness: 25%);
+$complement900: color.change($complement, $lightness: 20%);
+$accentLeft100: color.change($accentLeft, $lightness: 95%);
+$accentLeft600: color.change($accentLeft, $lightness: 40%);
+$accentRight100: color.change($accentRight, $lightness: 95%);
+$accentRight600: color.change($accentRight, $lightness: 40%);
+
+$code: hsl(338, 78%, 48%);
+$preformatted: hsl(0, 0%, 27%);
+$marked: hsl(50, 100%, 60%);
+$disabled: hsl(0, 0%, 94%);

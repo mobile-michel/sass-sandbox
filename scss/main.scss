@@ -1,37 +1,18 @@
-@charset "UTF-8";
+@import "variables/main.scss";
+@import "mixins/main.scss";
+@import "grid";
+@import "visibility"; // Visibility last for precedence
 
-// 1. Abstracts
-@use 'abstracts/variables';
-@use 'abstracts/colors';
-@use 'abstracts/mixins';
-@use 'abstracts/functions';
-@use 'abstracts/placeholders';
-@use 'abstracts/media-query';
 
-// 2. Vendors
+main:has(> section) {
+    @extend .row;
+}
 
-// 3. Base
-@use 'base/base';
-@use 'base/reset';
-@use 'base/typography';
-@use 'base/table';
-@use 'base/forms';
+main > section {
+    @extend .col;
+    background-color: beige;
+}
 
-// 4. Layout or utilities
-@use 'layout/main';
-@use 'layout/header';
-@use 'layout/sidebar';
-@use 'layout/footer';
-@use 'layout/section';
-@use 'layout/navigation';
-
-// 5. Components
-@use 'components/button';
-@use 'components/card';
-@use 'components/accordion';
-@use 'components/progress';
-@use 'components/dialog';
-
-// 6. Pages
-
-// 7. Themes
+header {
+    height: 100vh;
+}
