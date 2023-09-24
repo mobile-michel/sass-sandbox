@@ -14,18 +14,18 @@
   --bg: #{colors.$primary100}; // Main background
   --accent-bg: #{colors.$primary200}; // Article background
   --accent-border: #{colors.$primary300}; // Article border
-  --text: #{colors.$complement800}; // Main text
-  --text-light: #{colors.$complement700}; // Lighter text or aside background
-  --text-invert: #{colors.$complement100}; // Inverted text for aside
-  --border: #{colors.$complement900}; // Aside border
+  --text: #{colors.$secondary800}; // Main text
+  --text-light: #{colors.$secondary700}; // Lighter text or aside background
+  --text-invert: #{colors.$secondary100}; // Inverted text for aside
+  --border: #{colors.$secondary900}; // Aside border
   --accent: #{colors.$accentLeft600}; // Links & buttons
   --accent-text: #{colors.$accentLeft100}; // Link text
   --accent-hover: #{colors.$accentRight100}; // Hovered links & buttons
   --accent-hover-text: #{colors.$accentRight600}; // Hovered link text
   --code: #{colors.$code};
-  --preformatted: #{colors.$preformatted};
+  --preformatted: #{colors.$secondary800};
   --marked: #{colors.$marked};
-  --disabled: #{colors.$disabled};
+  --disabled: #{colors.$secondary100};
 }
 
 .container {
@@ -67,9 +67,9 @@
   border-radius: 0.25em;
 
   &.cp-box--dark {
-    background-color: #{colors.$complement700};
-    color: #{colors.$complement100};
-    border: 1px solid #{colors.$complement900};
+    background-color: #{colors.$secondary700};
+    color: #{colors.$secondary100};
+    border: 1px solid #{colors.$secondary900};
   }
 }
 

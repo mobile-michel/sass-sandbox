@@ -1,0 +1,43 @@
+@use 'colors';
+
+/* Global variables. */
+:root,
+::backdrop {
+  /* Set sans-serif & mono fonts */
+  --sans-font: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
+    "Nimbus Sans L", Roboto, "Noto Sans", "Segoe UI", Arial, Helvetica,
+    "Helvetica Neue", sans-serif;
+  --mono-font: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  --standard-border-radius: 5px;
+
+  /* Light & dark theme */
+
+  --accent-bg: #{colors.$primary200}; // Article background
+  --accent-border: #{colors.$primary300}; // Article border
+  --accent-text: #{colors.$accentLeft100}; // Links & buttons
+  --accent: #{colors.$accentLeft600}; // Background
+  --accent-hover-text: #{colors.$accentRight100}; // Link text
+  --accent-hover: #{colors.$accentRight600}; // Hovered links & buttons
+  --code: #{colors.$code};
+  --marked: #{colors.$marked};
+}
+
+html[data-theme='light'] {
+  --bg: #{colors.$primary100}; // Main background
+  --accent-bg: #{colors.$primary200}; // 
+  --border: #{colors.$primary300}; // 
+  --text: #{colors.$secondary900}; // Main text
+  --preformatted: #{colors.$secondary800}; // 
+  --text-light: #{colors.$secondary700}; // 
+  --disabled: #{colors.$secondary100}; // 
+}
+
+html[data-theme='dark'] {
+  --bg: #{colors.$secondary900}; // Main background
+  --accent-bg: #{colors.$secondary800}; // 
+  --border: #{colors.$secondary700}; // Box border
+  --text: #{colors.$primary100}; // Main text
+  --preformatted: #{colors.$primary200}; // Preformatted text
+  --text-light: #{colors.$primary300}; // Lighter text
+  --disabled: #{colors.$secondary700}; // Disabled element
+}
